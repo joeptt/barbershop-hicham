@@ -12,16 +12,13 @@ export default function Navbar() {
             const cleanObj = { id, imgUrl };
             return cleanObj;
         });
-        console.log("cleaned ->", cleanLogo);
         setLogo(cleanLogo);
-        console.log(logo);
     }, []);
 
     const getLogo = useCallback(async () => {
         try {
             const response = await client.getEntries({ content_type: "logo" });
             const responseData = response.items;
-            console.log(responseData);
             if (responseData) {
                 cleanUpData(responseData);
             } else {
