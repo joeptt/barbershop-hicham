@@ -3,26 +3,25 @@ import { client } from "./client";
 
 export default function HeroImage() {
     const [heroImages, setHeroImages] = useState([]);
-    const [currentImage, setCurrentImage] = useState(0);
+    let [currentImage, setCurrentImage] = useState(0);
 
     useEffect(() => {
-        console.log(heroImages);
+        console.log("TEST");
         if (heroImages.length > 0) {
-            setInterval(switchImage, 2000);
+            setInterval(switchImage, 3000);
         }
-    }, []);
+    }, [heroImages]);
 
     useEffect(() => {
         getHeroImages();
     }, [getHeroImages]);
 
     const switchImage = () => {
-        if (currentImage <= heroImages.length - 1) {
+        if (currentImage < heroImages.length) {
             console.log("currentImgTRUE", currentImage);
-            setCurrentImage(currentImage + 1);
+            setCurrentImage(currentImage++);
         } else {
             console.log("currentImgFALSE", currentImage, heroImages.length);
-
             setCurrentImage(0);
         }
         return currentImage;
@@ -45,7 +44,6 @@ export default function HeroImage() {
                 content_type: "heroImages",
             });
             const responseData = response.items[0].fields.heroImages;
-            console.log(responseData);
             if (responseData) {
                 cleanUpData(responseData);
             } else {
