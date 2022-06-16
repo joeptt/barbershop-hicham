@@ -1,12 +1,32 @@
 import { useCallback, useState, useEffect } from "react";
 import { client } from "./client";
-import { Swiper, SwiperSlide } from "swiper/react";
-import "swiper/css";
-import "swiper/css/navigation";
-import "swiper/css/pagination";
 
 export default function HeroImage() {
     const [heroImages, setHeroImages] = useState([]);
+    const [currentImage, setCurrentImage] = useState(0);
+
+    useEffect(() => {
+        console.log(heroImages);
+        if (heroImages.length > 0) {
+            setInterval(switchImage, 2000);
+        }
+    }, []);
+
+    useEffect(() => {
+        getHeroImages();
+    }, [getHeroImages]);
+
+    const switchImage = () => {
+        if (currentImage <= heroImages.length - 1) {
+            console.log("currentImgTRUE", currentImage);
+            setCurrentImage(currentImage + 1);
+        } else {
+            console.log("currentImgFALSE", currentImage, heroImages.length);
+
+            setCurrentImage(0);
+        }
+        return currentImage;
+    };
 
     const cleanUpData = useCallback((rawData) => {
         const cleanHero = rawData.map((image) => {
@@ -36,11 +56,15 @@ export default function HeroImage() {
         }
     }, []);
 
-    useEffect(() => {
-        getHeroImages();
-    }, [getHeroImages]);
-
     console.log("hero images -> ", heroImages);
 
-    return <div>Test</div>;
+    return (
+        <>
+            <div>
+                {heroImages.length > 0 && (
+                    <img src={heroImages[currentImage].imgUrl} />
+                )}
+            </div>
+        </>
+    );
 }
