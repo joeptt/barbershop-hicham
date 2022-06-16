@@ -1,3 +1,101 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: helvetica;
+}
+
 body {
-    background-color: ghostwhite;
+    background-color: orange;
+}
+
+header {
+    background-color: black;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100px;
+}
+
+header img {
+    height: 80%;
+    margin-left: 5vw;
+    padding-top: 10px;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+}
+
+.page-1 {
+    background-color: black;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.hero {
+    width: 90%;
+    height: 80%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.hero img {
+    height: 575px;
+    width: 90vw;
+    object-fit: cover;
+}
+
+.hero h1 {
+    font-size: 150px;
+    margin-top: -132px;
+    color: white;
+}
+
+.page-2 {
+    background-color: orange;
+    height: 90%;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+}
+
+.termin-page2 {
+    width: 30%;
+    margin-left: 100px;
+}
+
+.about-page2 {
+    width: 70%;
+    margin-right: 100px;
+}
+
+.about-page2 h1 {
+    font-size: 70px;
+}
+.about-page2 p {
+    font-size: 30px;
+}
+
+.page-3 {
+    background-color: orange;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.page-3 img {
+    height: 500px;
+    width: 70vw;
+    object-fit: cover;
+    background-attachment: fixed;
+    background-position: center;
 }
