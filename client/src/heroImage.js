@@ -4,22 +4,22 @@ import { client } from "./client";
 export default function HeroImage() {
     const [heroImages, setHeroImages] = useState([]);
     let [currentImage, setCurrentImage] = useState(0);
+    let interval;
 
     useEffect(() => {
         if (heroImages.length > 0) {
-            setInterval(switchImage, 5000);
+            interval = setInterval(switchImage, 4000);
         }
+        return () => {
+            clearInterval(interval);
+        };
     }, [heroImages]);
 
     useEffect(() => {
         getHeroImages();
     }, [getHeroImages]);
 
-    let counter = 0;
     const switchImage = () => {
-        counter++;
-        console.log(counter);
-
         if (currentImage < heroImages.length) {
             setCurrentImage(currentImage++);
         } else {
@@ -60,10 +60,7 @@ export default function HeroImage() {
             <div>
                 {heroImages.length > 0 && (
                     <img
-                        style={{
-                            animationName: "image-appear",
-                            animationDuration: "2s",
-                        }}
+                        key={heroImages[currentImage].id}
                         className="current-hero"
                         src={heroImages[currentImage].imgUrl}
                     />

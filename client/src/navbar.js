@@ -1,5 +1,6 @@
 import { useState, useEffect, useCallback } from "react";
 import { client } from "./client";
+import { Link } from "react-router-dom";
 
 export default function Navbar() {
     const [logo, setLogo] = useState([]);
@@ -40,10 +41,12 @@ export default function Navbar() {
                     return <img key={item.id} src={item.imgUrl}></img>;
                 })}
             <nav>
-                <p>über Hisham</p>
-                <p>Service</p>
-                <p>Location</p>
-                <p>Reservation</p>
+                <h3>über Hisham</h3>
+                <h3>Service</h3>
+                <h3>Location</h3>
+                <Link to="/termin">
+                    <button>Termin vereinbaren</button>
+                </Link>
             </nav>
         </header>
     );

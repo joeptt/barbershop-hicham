@@ -2,7 +2,7 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    font-family: helvetica;
+    font-family: "Roboto Condensed", sans-serif;
 }
 
 body {
@@ -31,6 +31,23 @@ nav {
     flex-direction: row;
 }
 
+nav h3 {
+    margin-right: 25px;
+    cursor: pointer;
+}
+
+nav button {
+    font-size: 18px;
+    color: white;
+    margin-right: 10vh;
+    height: 45px;
+    width: 200px;
+    border: none;
+    border-radius: 7.5px;
+    background-color: #a0d995;
+    cursor: pointer;
+}
+
 .page-1 {
     background-color: black;
     height: 100%;
@@ -52,14 +69,17 @@ nav {
     height: 575px;
     width: 90vw;
     object-fit: cover;
+    opacity: 75%;
+    animation-name: image-appear;
+    animation-duration: 2.5s;
 }
 
 @keyframes image-appear {
     from {
-        opacity: 0;
+        opacity: 0%;
     }
     to {
-        opacity: 100;
+        opacity: 75%;
     }
 }
 
@@ -71,27 +91,56 @@ nav {
 
 .page-2 {
     background-color: orange;
-    height: 90%;
+    height: 100%;
+
     display: flex;
     align-items: center;
-    flex-direction: row;
+    justify-content: space-around;
+    flex-direction: column;
 }
 
-.termin-page2 {
+.image-page2 {
     width: 30%;
-    margin-left: 100px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.image-page2 img {
+    width: 100%;
+    height: 450px;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px,
+        rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
+    object-fit: cover;
+}
+
+.image-bg {
+    background-attachment: fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 500px;
+    width: 70vw;
 }
 
 .about-page2 {
     width: 70%;
-    margin-right: 100px;
+    height: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
 }
 
 .about-page2 h1 {
     font-size: 70px;
+    color: white;
 }
 .about-page2 p {
-    font-size: 30px;
+    font-size: 35px;
 }
 
 .page-3 {
@@ -107,4 +156,21 @@ nav {
     object-fit: cover;
     background-attachment: fixed;
     background-position: center;
+}
+
+.page-2-scrollpage {
+    height: 650px;
+}
+
+.page-4 {
+    height: 100%;
+}
+.prices {
+    width: 100%;
+    height: 100%;
+    display: flex;
+}
+
+.prices div {
+    width: 33%;
 }
