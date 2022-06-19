@@ -6,9 +6,8 @@ export default function HeroImage() {
     let [currentImage, setCurrentImage] = useState(0);
 
     useEffect(() => {
-        console.log("TEST");
         if (heroImages.length > 0) {
-            setInterval(switchImage, 3000);
+            setInterval(switchImage, 5000);
         }
     }, [heroImages]);
 
@@ -16,13 +15,15 @@ export default function HeroImage() {
         getHeroImages();
     }, [getHeroImages]);
 
+    let counter = 0;
     const switchImage = () => {
+        counter++;
+        console.log(counter);
+
         if (currentImage < heroImages.length) {
-            console.log("currentImgTRUE", currentImage);
             setCurrentImage(currentImage++);
         } else {
-            console.log("currentImgFALSE", currentImage, heroImages.length);
-            setCurrentImage(0);
+            setCurrentImage((currentImage = 0));
         }
         return currentImage;
     };
@@ -54,13 +55,18 @@ export default function HeroImage() {
         }
     }, []);
 
-    console.log("hero images -> ", heroImages);
-
     return (
         <>
             <div>
                 {heroImages.length > 0 && (
-                    <img src={heroImages[currentImage].imgUrl} />
+                    <img
+                        style={{
+                            animationName: "image-appear",
+                            animationDuration: "2s",
+                        }}
+                        className="current-hero"
+                        src={heroImages[currentImage].imgUrl}
+                    />
                 )}
             </div>
         </>

@@ -54,6 +54,15 @@ nav {
     object-fit: cover;
 }
 
+@keyframes image-appear {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 100;
+    }
+}
+
 .hero h1 {
     font-size: 150px;
     margin-top: -132px;
