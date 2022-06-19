@@ -174,3 +174,8 @@ nav button {
 .prices div {
     width: 33%;
 }
+
+.damen-preise li {
+    display: flex;
+    justify-content: space-between;
+}

@@ -24,15 +24,45 @@ export default function Preise() {
         }
     }, []);
 
+    console.log("preise", preise);
+
     return (
         <div className="prices">
             <div>
                 <h1>Damen:</h1>
-                <ul>
+                <ul className="damen-preise">
                     {preise &&
-                        Object.keys(preise).map((item, i) => {
-                            return <li key={i}>{preise[i]}</li>;
-                        })}
+                        Object.entries(preise.damen).map(
+                            ([keyName, value], index) => {
+                                console.log(preise);
+                                return (
+                                    <>
+                                        {typeof value === "string" ? (
+                                            <li key={index}>
+                                                <p>{keyName}:</p>
+                                                <p>{value}</p>
+                                            </li>
+                                        ) : (
+                                            <li key={index}>
+                                                <p>{keyName}:</p>
+                                                <ul>
+                                                    {Object.entries(
+                                                        keyName
+                                                    ).map(
+                                                        ([
+                                                            keyName1,
+                                                            value1,
+                                                        ]) => {
+                                                            <li>Test</li>;
+                                                        }
+                                                    )}
+                                                </ul>
+                                            </li>
+                                        )}
+                                    </>
+                                );
+                            }
+                        )}
                 </ul>
             </div>
             <div>
