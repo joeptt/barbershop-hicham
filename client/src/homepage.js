@@ -69,16 +69,26 @@ export default function Homepage() {
                         </div>
                     </ScrollPage>
                 </div>
-                <ScrollPage page={3}>
-                    <div className="page-4">
-                        <Preise />
-                    </div>
-                </ScrollPage>
-                <ScrollPage page={4}>
-                    <div className="page-5">
-                        <p>TEST TEST TEST TEST TEST</p>
-                    </div>
-                </ScrollPage>
+                <div className="page-4-scrollpage">
+                    <ScrollPage page={3}>
+                        <div className="page-4">
+                            <Preise />
+                        </div>
+                    </ScrollPage>
+                </div>
+                <div className="page-5-scrollpage">
+                    <ScrollPage page={4}>
+                        <div className="page-5">
+                            <img src="https://i.ibb.co/L9B83KD/Bildschirmfoto-2022-06-20-um-14-23-47.png" />
+                            <div className="adress">
+                                <p>Adress: travestra</p>
+                                <p>weehfiwjfpwe</p>
+                                <p>weehfiwjfpwe</p>
+                                <p>weehfiwjfpwe</p>
+                            </div>
+                        </div>
+                    </ScrollPage>
+                </div>
             </ScrollContainer>
         </>
     );

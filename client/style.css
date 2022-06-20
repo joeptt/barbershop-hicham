@@ -207,3 +207,35 @@ nav button {
 .page-3-scrollpage {
     height: 650px;
 }
+
+#termin-button {
+    margin-top: 200px;
+    margin-left: 20%;
+    border: none;
+    height: 60px;
+    width: 250px;
+    background-color: #a0d995;
+    border-radius: 7px;
+    font-size: 20px;
+}
+
+.page-5 {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.page-5 img {
+    height: 400px;
+    width: 600px;
+    border-radius: 10px;
+}
+
+.adress {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 100%;
+}

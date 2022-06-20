@@ -24,7 +24,7 @@ export default function Preise() {
         }
     }, []);
 
-    function mappingLength(obj) {
+    function mappingHairLength(obj) {
         return (
             <ul className="hairlength-lists">
                 {Object.entries(obj).map(([keyName, value], index) => {
@@ -67,11 +67,11 @@ export default function Preise() {
                         </div>
                         <div>
                             <p>Waschen + Stylen: </p>
-                            {mappingLength(preise.damen.WaschenPlusStylen)}
+                            {mappingHairLength(preise.damen.WaschenPlusStylen)}
                         </div>
                         <div>
                             <p>Waschen + Schneiden + Stylen: </p>
-                            {mappingLength(
+                            {mappingHairLength(
                                 preise.damen.WaschenPlusSchneidenPlusStylen
                             )}
                         </div>
@@ -84,7 +84,7 @@ export default function Preise() {
                         </div>
                         <div>
                             <p>Komplett: </p>
-                            {mappingLength(preise.damen.Farbe.Komplett)}
+                            {mappingHairLength(preise.damen.Farbe.Komplett)}
                         </div>
                         <div>
                             <p>Ombré: </p>
@@ -126,7 +126,9 @@ export default function Preise() {
                         <div className="preise">
                             <h1>Sonstige Leistungen:</h1>
                             {mappingObjects(preise.sonstigeLeistungen)}
-                            <button>Jetzt Termin vereinbaren</button>
+                            <button id="termin-button">
+                                Jetzt Termin vereinbaren
+                            </button>
                         </div>
                     </div>
                 </div>
