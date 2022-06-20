@@ -222,7 +222,7 @@ nav button {
 .page-5 {
     height: 100%;
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     justify-content: space-around;
 }
 
@@ -234,8 +234,14 @@ nav button {
 
 .adress {
     display: flex;
-    align-items: center;
-    justify-content: center;
+    align-items: flex-start;
+    justify-content: flex-start;
     flex-direction: column;
     height: 100%;
+    margin-top: 100px;
+    margin-left: -300px;
+}
+
+.adress p {
+    font-size: 20px;
 }
