@@ -48,7 +48,9 @@ export default function Homepage() {
                     <ScrollPage page={1}>
                         <div className="page-2">
                             <div className="about-page2">
-                                <Animator animation={ZoomIn(0.7, 1)}>
+                                <Animator
+                                    animation={batch(ZoomIn(0.7, 1), Fade())}
+                                >
                                     <h1>Über Hisham</h1>
                                 </Animator>
                                 <Animator animation={slideInFade}>

@@ -6,7 +6,7 @@
 }
 
 body {
-    background-color: orange;
+    background-color: #4b5d67;
 }
 
 header {
@@ -90,7 +90,7 @@ nav button {
 }
 
 .page-2 {
-    background-color: orange;
+    background-color: #4b5d67;
     height: 100%;
 
     display: flex;
@@ -144,7 +144,7 @@ nav button {
 }
 
 .page-3 {
-    background-color: orange;
+    background-color: #4b5d67;
     display: flex;
     justify-content: center;
     align-items: flex-start;
@@ -169,13 +169,41 @@ nav button {
     width: 100%;
     height: 100%;
     display: flex;
+    align-items: flex-start;
+    justify-content: center;
 }
 
-.prices div {
-    width: 33%;
+.preise-columns {
+    width: 25%;
+    margin: 50px;
 }
 
-.damen-preise li {
+.preise div {
+    width: 100%;
     display: flex;
     justify-content: space-between;
+}
+
+.preise h1 {
+    margin: 30px 0 10px 0;
+    font-size: 40px;
+}
+
+.preise p {
+    font-size: 20px;
+}
+.preise li {
+    font-size: 20px;
+}
+
+.hairlength-lists {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-end;
+    list-style: none;
+}
+
+.page-3-scrollpage {
+    height: 650px;
 }

@@ -24,61 +24,113 @@ export default function Preise() {
         }
     }, []);
 
+    function mappingLength(obj) {
+        return (
+            <ul className="hairlength-lists">
+                {Object.entries(obj).map(([keyName, value], index) => {
+                    return (
+                        <li key={index}>
+                            {keyName}: {value}
+                        </li>
+                    );
+                })}
+            </ul>
+        );
+    }
+
+    function mappingObjects(obj) {
+        return Object.entries(obj).map(([keyName, value], index) => {
+            return (
+                <div key={index}>
+                    <p>{keyName}: </p>
+                    <p>{value}</p>
+                </div>
+            );
+        });
+    }
+
     console.log("preise", preise);
 
     return (
-        <div className="prices">
-            <div>
-                <h1>Damen:</h1>
-                <ul className="damen-preise">
-                    {preise &&
-                        Object.entries(preise.damen).map(
-                            ([keyName, value], index) => {
-                                console.log(preise);
-                                return (
-                                    <>
-                                        {typeof value === "string" ? (
-                                            <li key={index}>
-                                                <p>{keyName}:</p>
-                                                <p>{value}</p>
-                                            </li>
-                                        ) : (
-                                            <li key={index}>
-                                                <p>{keyName}:</p>
-                                                <ul>
-                                                    {Object.entries(
-                                                        keyName
-                                                    ).map(
-                                                        ([
-                                                            keyName1,
-                                                            value1,
-                                                        ]) => {
-                                                            <li>Test</li>;
-                                                        }
-                                                    )}
-                                                </ul>
-                                            </li>
-                                        )}
-                                    </>
-                                );
-                            }
-                        )}
-                </ul>
-            </div>
-            <div>
-                <div>
-                    <h1>Herren:</h1>
+        <div>
+            {preise && (
+                <div className="prices">
+                    <div className="preise preise-columns">
+                        <h1>Damen:</h1>
+                        <div>
+                            <p>Schneiden: </p>
+                            <p>{preise.damen.Schneiden}</p>
+                        </div>
+                        <div>
+                            <p>Waschen + Schneiden: </p>
+                            <p>{preise.damen.WaschenPlusSchneiden}</p>
+                        </div>
+                        <div>
+                            <p>Waschen + Stylen: </p>
+                            {mappingLength(preise.damen.WaschenPlusStylen)}
+                        </div>
+                        <div>
+                            <p>Waschen + Schneiden + Stylen: </p>
+                            {mappingLength(
+                                preise.damen.WaschenPlusSchneidenPlusStylen
+                            )}
+                        </div>
+                        <p>
+                            <strong>Farbe:</strong>
+                        </p>
+                        <div>
+                            <p>Ansatz: </p>
+                            <p>{preise.damen.Farbe.Ansatz}</p>
+                        </div>
+                        <div>
+                            <p>Komplett: </p>
+                            {mappingLength(preise.damen.Farbe.Komplett)}
+                        </div>
+                        <div>
+                            <p>Ombré: </p>
+                            <p>{preise.damen.Farbe.Ombre}</p>
+                        </div>
+                        <div>
+                            <p>Intensivtönung: </p>
+                            <p>{preise.damen.Farbe.Intensivtoenung}</p>
+                        </div>
+                        <div>
+                            <p>Strähnen Oberkopf: </p>
+                            <p>{preise.damen.Farbe.StraehnenOberkopf}</p>
+                        </div>
+                        <div>
+                            <p>Strähnen Komplett: </p>
+                            <p>{preise.damen.Farbe.StraehnenKomplett}</p>
+                        </div>
+                        <br></br>
+                        <div>
+                            <p>Haarverlängerung: </p>
+                            <p>{preise.damen.Haarverlaengerung}</p>
+                        </div>
+                        <div>
+                            <p>Hochsteckfrisur: </p>
+                            <p>{preise.damen.Hochsteckfrisur}</p>
+                        </div>
+                    </div>
+                    <div className="preise-columns">
+                        <div className="preise">
+                            <h1>Herren:</h1>
+                            {mappingObjects(preise.herren)}
+                        </div>
+                        <div className="preise">
+                            <h1>Kinder:</h1>
+                            {mappingObjects(preise.kids)}
+                        </div>
+                    </div>
+                    <div className="preise-columns">
+                        <div className="preise">
+                            <h1>Sonstige Leistungen:</h1>
+                            {mappingObjects(preise.sonstigeLeistungen)}
+                            <button>Jetzt Termin vereinbaren</button>
+                        </div>
+                    </div>
                 </div>
-                <div>
-                    <h1>Kinder:</h1>
-                </div>
-            </div>
-            <div>
-                <div>
-                    <h1>Sonstiges:</h1>
-                    <button>Jetzt Termin vereinbaren</button>
-                </div>
-            </div>
+            )}
         </div>
     );
 }
