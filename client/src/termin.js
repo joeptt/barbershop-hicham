@@ -1,6 +1,6 @@
 import { useState, useEffect, useCallback } from "react";
 import { client } from "./client";
-import Navbar from "./navbar";
+import Logo from "./logo";
 
 export default function Termin() {
     const [date, setDate] = useState();
@@ -36,7 +36,7 @@ export default function Termin() {
     };
 
     const onClick = () => {
-        const url = `https://wa.me/4915175052891?text=Hallo%20Hisham!%20Hast%20du%20am%20${date}%20um%20${time}Uhr%20Zeit?%F0%9F%98%80
+        const url = `https://wa.me/4915175052891?text=Hallo%20Hisham!%20Hast%20du%20am%20${date}%20um%20${time}%20Uhr%20Zeit?
 `;
         setLink(url);
     };
@@ -46,10 +46,20 @@ export default function Termin() {
             <div className="termin-tool">
                 <h3>Wähle ein Datum für deine Terminanfrage!</h3>
                 <input onChange={onChangeDate} type="date" />
-                <input onChange={onChangeTime} type="time" step="3000" />
-                <a href={link} onClick={onClick}>
-                    <button>Jetzt Terminanfrage auf WhatsApp schicken</button>
-                </a>
+                <input onChange={onChangeTime} type="time" />
+                {date != undefined && time != undefined ? (
+                    <a href={link} onClick={onClick}>
+                        <button>
+                            Jetzt Terminanfrage auf WhatsApp schicken
+                        </button>
+                    </a>
+                ) : (
+                    <a href="https://wa.me/4915175052891?text=Hallo%20Hisham!%20Ich%20würde%20gerne%20einen%20Termin%20machen!%20Wann%20hast%20du%20Zeit?">
+                        <button>
+                            Jetzt Terminanfrage auf WhatsApp schicken
+                        </button>
+                    </a>
+                )}
             </div>
         </>
     );

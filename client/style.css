@@ -9,6 +9,14 @@ body {
     background-color: #4b5d67;
 }
 
+.logo {
+    height: 100%;
+}
+
+.logo img {
+    height: 100%;
+}
+
 header {
     background-color: black;
     color: white;
@@ -18,10 +26,10 @@ header {
     height: 100px;
 }
 
-header img {
-    margin-top: 10px;
+header div {
+    margin-top: 5px;
     height: 80%;
-    margin-left: 5vw;
+    margin-left: 3vw;
 }
 
 nav {
@@ -86,7 +94,7 @@ nav button {
 .hero h1 {
     font-size: 150px;
     margin-top: -132px;
-    color: rgb(241, 241, 241);
+    color: rgba(241, 241, 241, 0.7);
 }
 
 .page-2 {
@@ -137,7 +145,7 @@ nav button {
 
 .about-page2 h1 {
     font-size: 70px;
-    color: white;
+    color: rgba(241, 241, 241, 0.7);
 }
 .about-page2 p {
     font-size: 35px;
@@ -274,7 +282,7 @@ nav button {
     font-size: 15px;
     border-radius: 5px;
     border: none;
-    background-color: white;
+    background-color: #a0d995;
     margin: 10px;
     cursor: pointer;
 }
