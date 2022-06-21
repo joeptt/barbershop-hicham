@@ -1,5 +1,6 @@
 import { useCallback, useState, useEffect } from "react";
 import { client } from "./client";
+import { Link } from "react-router-dom";
 
 export default function Preise() {
     const [preise, setPreise] = useState();
@@ -24,7 +25,7 @@ export default function Preise() {
         }
     }, []);
 
-    function mappingHairLength(obj) {
+    const mappingHairLength = (obj) => {
         return (
             <ul className="hairlength-lists">
                 {Object.entries(obj).map(([keyName, value], index) => {
@@ -36,9 +37,9 @@ export default function Preise() {
                 })}
             </ul>
         );
-    }
+    };
 
-    function mappingObjects(obj) {
+    const mappingObjects = (obj) => {
         return Object.entries(obj).map(([keyName, value], index) => {
             return (
                 <div key={index}>
@@ -47,9 +48,7 @@ export default function Preise() {
                 </div>
             );
         });
-    }
-
-    console.log("preise", preise);
+    };
 
     return (
         <div>
@@ -126,9 +125,11 @@ export default function Preise() {
                         <div className="preise">
                             <h1>Sonstige Leistungen:</h1>
                             {mappingObjects(preise.sonstigeLeistungen)}
-                            <button id="termin-button">
-                                Jetzt Termin vereinbaren
-                            </button>
+                            <Link to="/termin">
+                                <button id="termin-button">
+                                    Jetzt Termin vereinbaren
+                                </button>
+                            </Link>
                         </div>
                     </div>
                 </div>

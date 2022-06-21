@@ -4,17 +4,9 @@ import {
     ScrollPage,
     batch,
     Fade,
-    FadeIn,
-    FadeOut,
     Move,
-    MoveIn,
-    MoveOut,
-    Sticky,
-    StickyIn,
-    StickyOut,
     Zoom,
     ZoomIn,
-    ZoomOut,
 } from "react-scroll-motion";
 import Navbar from "./navbar";
 import About from "./about";
@@ -80,11 +72,17 @@ export default function Homepage() {
                     <ScrollPage page={4}>
                         <div className="page-5">
                             <img src="https://i.ibb.co/L9B83KD/Bildschirmfoto-2022-06-20-um-14-23-47.png" />
-                            <div className="adress">
-                                <h1>Adresse:</h1>
-                                <p>Travestraße 3</p>
-                                <p>10247 Berlin</p>
-                                <p>Tel: 030/62963957</p>
+                            <div>
+                                <div className="adress">
+                                    <h1>Adresse:</h1>
+                                    <p>Travestraße 3</p>
+                                    <p>10247 Berlin</p>
+                                    <p>Tel: 030/62963957</p>
+                                </div>
+                                <div className="opening">
+                                    <h1>Öffnungszeiten:</h1>
+                                    <p>Montag-Freitag: 10-20Uhr</p>
+                                </div>
                             </div>
                         </div>
                     </ScrollPage>
