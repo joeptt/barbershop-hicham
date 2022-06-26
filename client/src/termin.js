@@ -1,6 +1,5 @@
 import { useState, useEffect, useCallback } from "react";
 import { client } from "./client";
-import Logo from "./logo";
 
 export default function Termin() {
     const [date, setDate] = useState();
