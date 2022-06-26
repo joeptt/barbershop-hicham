@@ -6,7 +6,7 @@
 }
 
 body {
-    background-color: #4b5d67;
+    background-color: rgb(27, 27, 27);
 }
 
 .logo {
@@ -49,10 +49,10 @@ nav button {
     color: white;
     margin-right: 10vh;
     height: 45px;
-    width: 200px;
+    width: 150px;
     border: none;
     border-radius: 7.5px;
-    background-color: #a0d995;
+    background-color: #5fd068;
     cursor: pointer;
 }
 
@@ -98,7 +98,7 @@ nav button {
 }
 
 .page-2 {
-    background-color: #4b5d67;
+    background-color: rgb(27, 27, 27);
     height: 100%;
 
     display: flex;
@@ -152,7 +152,7 @@ nav button {
 }
 
 .page-3 {
-    background-color: #4b5d67;
+    background-color: rgb(27, 27, 27);
     display: flex;
     justify-content: center;
     align-items: flex-start;
@@ -195,13 +195,16 @@ nav button {
 .preise h1 {
     margin: 30px 0 10px 0;
     font-size: 40px;
+    color: #f15412;
 }
 
 .preise p {
     font-size: 20px;
+    color: rgba(241, 241, 241, 1);
 }
 .preise li {
     font-size: 20px;
+    color: rgba(241, 241, 241, 1);
 }
 
 .hairlength-lists {
