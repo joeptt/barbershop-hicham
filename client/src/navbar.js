@@ -1,26 +1,19 @@
 import Logo from "./logo";
 import { Link } from "react-router-dom";
-import { useHistory } from "react-router-dom";
 
-export default function Navbar() {
-    const history = useHistory();
-
-    const sendToGallery = () => {
-        history.push("/galerie");
-    };
-
+export default function Navbar({ scroll }) {
     return (
         <header>
             <div>
                 <Logo />
             </div>
             <nav>
-                <h3>über Hisham</h3>
-                <h3 className="gallery-link" onClick={sendToGallery}>
+                <h3 onClick={scroll}>über Hisham</h3>
+                <h3 onClick={scroll}>Service</h3>
+                <h3 onClick={scroll}>Location</h3>
+                <h3 onClick={scroll} className="gallery-link">
                     Galerie
                 </h3>
-                <h3>Service</h3>
-                <h3>Location</h3>
                 <Link to="/termin">
                     <button>Termin vereinbaren</button>
                 </Link>

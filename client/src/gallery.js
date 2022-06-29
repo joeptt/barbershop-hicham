@@ -1,6 +1,5 @@
 import { useCallback, useState, useEffect } from "react";
 import { client } from "./client";
-import Navbar from "./navbar";
 
 export default function Gallery() {
     const [images, setImages] = useState();
@@ -27,7 +26,6 @@ export default function Gallery() {
                 content_type: "galerie",
             });
             const responseData = response.items[0].fields.imagesGallery;
-            console.log(responseData);
             if (responseData) {
                 cleanUpData(responseData);
             } else {
@@ -40,7 +38,6 @@ export default function Gallery() {
 
     return (
         <>
-            <Navbar />
             <div className="galery-page">
                 {images &&
                     images.map((image) => {

@@ -8,22 +8,43 @@ import {
     Zoom,
     ZoomIn,
 } from "react-scroll-motion";
+import { useRef } from "react";
 import Navbar from "./navbar";
 import About from "./about";
 import HeroImage from "./heroImage";
 import PortraitFoto from "./portraitFoto";
 import Preise from "./preise";
+import Gallery from "./gallery";
 
 const zoomAndFade = batch(Zoom(2.5, 1), Fade());
 const slideInFade = batch(Move(1000, 0, -1000, 0));
 
 export default function Homepage() {
+    const myRefAbout = useRef(null);
+    const myRefServices = useRef(null);
+    const myRefLocation = useRef(null);
+    const myRefGalery = useRef();
+
+    const scroll = (e) => {
+        console.log("Scrolled", myRefServices.current, e.target.innerText);
+        const text = e.target.innerText;
+        if (text === "über Hisham") {
+            myRefAbout.current.scrollIntoView();
+        } else if (text === "Service") {
+            myRefServices.current.scrollIntoView();
+        } else if (text === "Location") {
+            myRefLocation.current.scrollIntoView();
+        } else if (text === "Galerie") {
+            myRefGalery.current.scrollIntoView();
+        }
+    };
+
     return (
         <>
             <ScrollContainer>
                 <div className="page-1-scrollpage">
                     <ScrollPage page={0}>
-                        <Navbar />
+                        <Navbar scroll={scroll} />
                         <div className="page-1">
                             <div className="hero">
                                 <HeroImage />
@@ -36,7 +57,7 @@ export default function Homepage() {
                         </div>
                     </ScrollPage>
                 </div>
-                <div className="page-2-scrollpage">
+                <div ref={myRefAbout} className="page-2-scrollpage">
                     <ScrollPage page={1}>
                         <div className="page-2">
                             <div className="about-page2">
@@ -61,14 +82,14 @@ export default function Homepage() {
                         </div>
                     </ScrollPage>
                 </div>
-                <div className="page-4-scrollpage">
+                <div ref={myRefServices} className="page-4-scrollpage">
                     <ScrollPage page={3}>
                         <div className="page-4">
                             <Preise />
                         </div>
                     </ScrollPage>
                 </div>
-                <div className="page-5-scrollpage">
+                <div ref={myRefLocation} className="page-5-scrollpage">
                     <ScrollPage page={4}>
                         <div className="page-5">
                             <img src="https://i.ibb.co/L9B83KD/Bildschirmfoto-2022-06-20-um-14-23-47.png" />
@@ -86,6 +107,9 @@ export default function Homepage() {
                             </div>
                         </div>
                     </ScrollPage>
+                </div>
+                <div ref={myRefGalery} className="page-6-scrollpage">
+                    <Gallery />
                 </div>
             </ScrollContainer>
         </>
