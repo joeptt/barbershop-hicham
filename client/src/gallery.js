@@ -39,6 +39,7 @@ export default function Gallery() {
     return (
         <>
             <div className="galery-page">
+                <div className="breakline"></div>
                 {images &&
                     images.map((image) => {
                         return (

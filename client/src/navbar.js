@@ -14,6 +14,15 @@ export default function Navbar({ scroll }) {
                 <h3 onClick={scroll} className="gallery-link">
                     Galerie
                 </h3>
+                <a
+                    className="nav-anchor"
+                    href="https://instagram.com/hisham.berlin2022?igshid=YmMyMTA2M2Y="
+                >
+                    <img
+                        className="nav-img"
+                        src="https://i.ibb.co/QJmgx3b/instagram-1.png"
+                    ></img>
+                </a>
                 <Link to="/termin">
                     <button>Termin vereinbaren</button>
                 </Link>

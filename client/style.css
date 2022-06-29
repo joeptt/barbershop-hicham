@@ -10,7 +10,7 @@ html {
 }
 
 body {
-    background-color: black;
+    background-color: #2c3639;
 }
 
 .logo {
@@ -37,6 +37,7 @@ header div {
 }
 
 nav {
+    height: 100%;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -45,6 +46,15 @@ nav {
 
 nav h3 {
     margin-right: 25px;
+    cursor: pointer;
+}
+
+.nav-img {
+    height: 100%;
+}
+.nav-anchor {
+    height: 30%;
+    margin-right: 20px;
     cursor: pointer;
 }
 
@@ -58,6 +68,10 @@ nav button {
     border-radius: 7.5px;
     background-color: #5fd068;
     cursor: pointer;
+}
+
+nav button:hover {
+    box-shadow: rgba(238, 238, 238, 0.2) 0px 7px 29px 0px;
 }
 
 .page-1 {
@@ -262,6 +276,7 @@ nav button {
     height: 400px;
     width: 600px;
     border-radius: 10px;
+    object-fit: cover;
 }
 
 .adress {
@@ -270,11 +285,30 @@ nav button {
     justify-content: flex-start;
     flex-direction: column;
     height: 100%;
-    margin-top: 100px;
     margin-bottom: 100px;
+    color: rgba(241, 241, 241, 0.9);
 }
 
 .adress p {
+    font-size: 20px;
+}
+
+.adress a {
+    font-size: 20px;
+    color: rgba(241, 241, 241, 0.8);
+}
+
+.opening {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-direction: column;
+    height: 100%;
+    margin-bottom: 100px;
+    color: rgba(241, 241, 241, 0.9);
+}
+
+.opening p {
     font-size: 20px;
 }
 
@@ -285,7 +319,6 @@ nav button {
     flex-wrap: wrap;
     justify-content: center;
     flex-direction: row;
-    margin-top: 20px;
 }
 
 .image-gallery img {
@@ -381,4 +414,10 @@ nav button {
     cursor: pointer;
     border: 2px solid rgba(241, 241, 241, 0.7);
     border-radius: 50%;
+}
+
+.breakline {
+    width: 80%;
+    border-bottom: 1px solid rgba(241, 241, 241, 0.5);
+    margin-bottom: 100px;
 }

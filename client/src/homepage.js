@@ -15,6 +15,7 @@ import HeroImage from "./heroImage";
 import PortraitFoto from "./portraitFoto";
 import Preise from "./preise";
 import Gallery from "./gallery";
+import Adress from "./adress";
 
 const zoomAndFade = batch(Zoom(2.5, 1), Fade());
 const slideInFade = batch(Move(1000, 0, -1000, 0));
@@ -92,19 +93,7 @@ export default function Homepage() {
                 <div ref={myRefLocation} className="page-5-scrollpage">
                     <ScrollPage page={4}>
                         <div className="page-5">
-                            <img src="https://i.ibb.co/L9B83KD/Bildschirmfoto-2022-06-20-um-14-23-47.png" />
-                            <div>
-                                <div className="adress">
-                                    <h1>Adresse:</h1>
-                                    <p>Travestraße 3</p>
-                                    <p>10247 Berlin</p>
-                                    <p>Tel: 030/62963957</p>
-                                </div>
-                                <div className="opening">
-                                    <h1>Öffnungszeiten:</h1>
-                                    <p>Montag-Freitag: 10-20Uhr</p>
-                                </div>
-                            </div>
+                            <Adress />
                         </div>
                     </ScrollPage>
                 </div>
