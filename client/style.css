@@ -421,3 +421,125 @@ nav button:hover {
     border-bottom: 1px solid rgba(241, 241, 241, 0.5);
     margin-bottom: 100px;
 }
+
+@media only screen and (max-width: 600px) {
+    nav h3 {
+        display: none;
+    }
+
+    nav button {
+        font-size: 18px;
+        color: white;
+        margin-right: 5vw;
+        height: 35px;
+        width: 145px;
+        border: none;
+        border-radius: 7.5px;
+        background-color: #5fd068;
+        cursor: pointer;
+    }
+
+    header div {
+        margin-top: 0;
+        height: 60px;
+    }
+
+    .hero img {
+        height: 575px;
+        width: 100vw;
+        object-fit: cover;
+        opacity: 75%;
+        animation-name: image-appear;
+        animation-duration: 2.5s;
+    }
+
+    .hero h1 {
+        font-size: 100px;
+        margin-top: -90px;
+    }
+
+    .about-page2 h1 {
+        font-size: 50px;
+    }
+
+    .page-3-scrollpage {
+        height: 590px;
+    }
+
+    .about-page2 p {
+        font-size: 25px;
+    }
+
+    .image-bg {
+        width: 90vw;
+    }
+
+    .prices {
+        flex-direction: column;
+    }
+
+    .preise-columns {
+        width: 100%;
+        margin: 0;
+        padding: 10px;
+    }
+
+    .page-4-scrollpage > div:first-child {
+        height: 1250px !important;
+    }
+    .page-5-scrollpage > div:first-child {
+        height: 900px !important;
+    }
+
+    .page-5 {
+        flex-direction: column;
+        align-items: center;
+    }
+    .adress-and-opening {
+        width: 100%;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .adress {
+        margin: 60px 0 30px 0;
+        height: 50%;
+    }
+
+    .page-5 img {
+        height: 345px;
+        width: 375px;
+        border-radius: 10px;
+        object-fit: cover;
+    }
+
+    .termin-page {
+        flex-direction: column;
+        height: 100%;
+    }
+
+    .termin-text {
+        width: 100%;
+        color: #2c3639;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        margin-top: 170px;
+    }
+
+    .termin-tool {
+        display: flex;
+        width: 80%;
+        height: 50%;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        border-top: solid 1px rgba(241, 241, 241, 0.5);
+        border-left: none;
+        margin-top: 30px;
+        padding-top: 30px;
+    }
+}
