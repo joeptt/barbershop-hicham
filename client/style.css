@@ -455,7 +455,7 @@ nav button:hover {
     }
 
     .hero img {
-        height: 575px;
+        height: 75vh;
         width: 100vw;
         object-fit: cover;
         opacity: 75%;
@@ -465,7 +465,6 @@ nav button:hover {
 
     .hero h1 {
         font-size: 100px;
-        margin-top: -90px;
     }
 
     .about-page2 h1 {
