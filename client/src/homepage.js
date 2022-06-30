@@ -33,7 +33,7 @@ export default function Homepage() {
             myRefAbout.current.scrollIntoView();
         } else if (text === "Service") {
             myRefServices.current.scrollIntoView();
-        } else if (text === "Location") {
+        } else if (text === "Kontakt") {
             myRefLocation.current.scrollIntoView();
         } else if (text === "Galerie") {
             myRefGalery.current.scrollIntoView();

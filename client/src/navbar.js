@@ -10,7 +10,7 @@ export default function Navbar({ scroll }) {
             <nav>
                 <h3 onClick={scroll}>über Hisham</h3>
                 <h3 onClick={scroll}>Service</h3>
-                <h3 onClick={scroll}>Location</h3>
+                <h3 onClick={scroll}>Kontakt</h3>
                 <h3 onClick={scroll} className="gallery-link">
                     Galerie
                 </h3>

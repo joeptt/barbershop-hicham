@@ -47,10 +47,17 @@ nav {
 nav h3 {
     margin-right: 25px;
     cursor: pointer;
+    transition: all 0.5s;
+}
+
+nav h3:hover {
+    color: #83d4ff;
 }
 
 .nav-img {
     height: 100%;
+    padding-left: 30px;
+    border-left: 1px solid rgba(241, 241, 241, 0.5);
 }
 .nav-anchor {
     height: 30%;
@@ -64,9 +71,10 @@ nav button {
     margin-right: 10vh;
     height: 45px;
     width: 150px;
-    border: none;
+    border: 1px solid white;
     border-radius: 7.5px;
-    background-color: #5fd068;
+    background-color: #d78ffd;
+
     cursor: pointer;
 }
 
@@ -110,8 +118,9 @@ nav button:hover {
 }
 
 .hero h1 {
+    font-family: Oswald;
     font-size: 150px;
-    margin-top: -132px;
+    margin-top: -169px;
     color: rgba(241, 241, 241, 0.7);
 }
 
@@ -387,7 +396,8 @@ nav button:hover {
 }
 
 .termin-text h1 {
-    font-size: 35px;
+    font-size: 40px;
+    font-family: "Oswald", sans-serif;
 }
 .termin-text h3 {
     font-size: 20px;
@@ -422,7 +432,7 @@ nav button:hover {
     margin-bottom: 100px;
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 800px) {
     nav h3 {
         display: none;
     }
@@ -435,7 +445,7 @@ nav button:hover {
         width: 145px;
         border: none;
         border-radius: 7.5px;
-        background-color: #5fd068;
+        background-color: #d68ffddb;
         cursor: pointer;
     }
 

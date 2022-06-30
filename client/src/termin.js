@@ -54,11 +54,11 @@ export default function Termin() {
             <div className="termin-page">
                 <div className="termin-text">
                     <div>
-                        <h1>Vereinbare jetzt deinen Termin über WhatsApp!</h1>
                         <h3>
                             Fülle ganz einfach das Formular aus und klicke dann
                             den grünen Button
                         </h3>
+                        <h1>Vereinbare jetzt deinen Termin über WhatsApp!</h1>
                         <br></br>
                         <h3>
                             Anschließend wird sich WhatsApp, mit einer
