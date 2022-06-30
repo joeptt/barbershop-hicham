@@ -74,7 +74,7 @@ nav button {
     border: 1px solid white;
     border-radius: 7.5px;
     background-color: #d78ffd;
-
+    transition: 0.5s all;
     cursor: pointer;
 }
 
@@ -100,7 +100,7 @@ nav button:hover {
 }
 
 .hero img {
-    height: 575px;
+    height: 70vh;
     width: 90vw;
     object-fit: cover;
     opacity: 75%;
