@@ -551,4 +551,9 @@ nav button:hover {
         margin-top: 30px;
         padding-top: 30px;
     }
+
+    .about-page2 h1 {
+        font-size: 70px;
+        color: #1a4d2e;
+    }
 }
