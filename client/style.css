@@ -480,7 +480,11 @@ nav button:hover {
     }
 
     .image-bg {
-        width: 90vw;
+        display: none;
+    }
+
+    .page-3-scrollpage {
+        display: none;
     }
 
     .prices {
