@@ -10,6 +10,7 @@ export default function Logo() {
             const { id } = sys;
             const imgUrl = fields.logoImage.fields.file.url;
             const cleanObj = { id, imgUrl };
+            console.log("clean", cleanObj);
             return cleanObj;
         });
         setLogo(cleanLogo);
@@ -18,7 +19,9 @@ export default function Logo() {
     const getLogo = useCallback(async () => {
         try {
             const response = await client.getEntries({ content_type: "logo" });
+            console.log("response", response);
             const responseData = response.items;
+            console.log("responseData", responseData);
             if (responseData) {
                 cleanUpData(responseData);
             } else {

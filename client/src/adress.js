@@ -17,7 +17,6 @@ export default function Adress() {
                     <p>Donnerstag: 10-19Uhr</p>
                     <p>Freitag: 10-19Uhr</p>
                     <p>Samstag: 10-19Uhr</p>
-                    <p>Sonntag: 10-19Uhr</p>
                 </div>
             </div>
         </>

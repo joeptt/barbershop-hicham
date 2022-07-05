@@ -27,7 +27,6 @@ export default function Homepage() {
     const myRefGalery = useRef();
 
     const scroll = (e) => {
-        console.log("Scrolled", myRefServices.current, e.target.innerText);
         const text = e.target.innerText;
         if (text === "über Hisham") {
             myRefAbout.current.scrollIntoView();
