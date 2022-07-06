@@ -1,7 +1,7 @@
 export default function Adress() {
     return (
         <>
-            <img src="https://i.ibb.co/L9B83KD/Bildschirmfoto-2022-06-20-um-14-23-47.png" />
+            <img src="https://i.ibb.co/Yjp8v4j/Bildschirmfoto-2022-07-05-um-15-06-46.png" />
             <div className="adress-and-opening">
                 <div className="adress">
                     <h1>Adresse:</h1>

@@ -14,9 +14,14 @@ export default function Navbar({ scroll }) {
                 <h3 onClick={scroll} className="gallery-link">
                     Galerie
                 </h3>
+                <Link style={{ textDecoration: "none" }} to="/impressum">
+                    <h3 className="impressum-navbar">Impressum</h3>
+                </Link>
                 <a
                     className="nav-anchor"
                     href="https://instagram.com/hisham.berlin2022?igshid=YmMyMTA2M2Y="
+                    target="_blank"
+                    rel="noreferrer"
                 >
                     <img
                         className="nav-img"

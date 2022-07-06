@@ -432,6 +432,29 @@ nav button:hover {
     margin-bottom: 100px;
 }
 
+.impressum {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #dcd7c9;
+}
+
+.impressum div {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+}
+.impressum h1 {
+    margin-bottom: 30px;
+}
+
+.impressum-navbar {
+    color: white;
+}
+
 @media only screen and (max-width: 800px) {
     nav h3 {
         display: none;
