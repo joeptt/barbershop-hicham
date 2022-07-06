@@ -16,6 +16,7 @@ import PortraitFoto from "./portraitFoto";
 import Preise from "./preise";
 import Gallery from "./gallery";
 import Adress from "./adress";
+import { Link } from "react-router-dom";
 
 const zoomAndFade = batch(Zoom(2.5, 1), Fade());
 const slideInFade = batch(Move(1000, 0, -1000, 0));
@@ -98,6 +99,11 @@ export default function Homepage() {
                 </div>
                 <div ref={myRefGalery} className="page-6-scrollpage">
                     <Gallery />
+                </div>
+                <div>
+                    <Link to="/impressum">
+                        <p>Impressum</p>
+                    </Link>
                 </div>
             </ScrollContainer>
         </>

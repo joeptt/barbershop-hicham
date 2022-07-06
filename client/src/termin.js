@@ -82,7 +82,11 @@ export default function Termin() {
                             </button>
                         </a>
                     ) : (
-                        <a href="https://wa.me/4915175052891?text=Hallo%20Hisham!%20Ich%20würde%20gerne%20einen%20Termin%20machen!%20Wann%20hast%20du%20Zeit?">
+                        <a
+                            href="https://wa.me/4917665844344?text=Hallo%20Hisham!%20Ich%20würde%20gerne%20einen%20Termin%20machen!%20Wann%20hast%20du%20Zeit?"
+                            target="_blank"
+                            rel="noreferrer"
+                        >
                             <button>
                                 Jetzt Terminanfrage auf WhatsApp schicken
                             </button>
