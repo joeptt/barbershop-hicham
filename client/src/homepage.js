@@ -100,7 +100,7 @@ export default function Homepage() {
                 <div ref={myRefGalery} className="page-6-scrollpage">
                     <Gallery />
                 </div>
-                <div>
+                <div className="impressum-homepage">
                     <Link to="/impressum">
                         <p>Impressum</p>
                     </Link>

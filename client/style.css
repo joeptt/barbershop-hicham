@@ -322,7 +322,6 @@ nav button:hover {
 }
 
 .galery-page {
-    height: 100vh;
     width: 100%;
     display: flex;
     flex-wrap: wrap;
@@ -452,6 +451,21 @@ nav button:hover {
 }
 
 .impressum-navbar {
+    color: white;
+}
+
+.impressum-homepage {
+    height: 100px;
+    width: 100%;
+    padding: 50px;
+    background-color: black;
+    opacity: 0.4;
+    display: flex;
+    align-items: center;
+}
+
+.impressum-homepage a {
+    font-size: 18px;
     color: white;
 }
 
