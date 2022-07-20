@@ -1,5 +1,5 @@
 import * as contentful from "contentful";
-const secrets = require("../../secrets.json");
+const secrets = require("../../sec.json");
 
 export const client = contentful.createClient({
     space: secrets.REACT_APP_SPACED_ID,
