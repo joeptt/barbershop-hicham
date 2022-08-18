@@ -56,7 +56,7 @@ export default function Termin() {
     };
 
     const onClick = () => {
-        const url = `https://wa.me/${whatsapp}?text=Hallo%20Hisham!%20Hast%20du%20am%20${date}%20um%20${time}%20Uhr%20Zeit%20für%20einen%20${gender}%20Haarschnitt?`;
+        const url = `https://wa.me/${whatsapp}?text=Hallo%20Hisham!%20Hast%20du%20am%20${date}%20um%20${time}%20Uhr%20Zeit%20für%20einen%20${gender}%20Termin?`;
         setLink(url);
     };
 
