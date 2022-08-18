@@ -6,6 +6,7 @@ export default function Termin() {
     const [date, setDate] = useState();
     const [time, setTime] = useState();
     const [link, setLink] = useState();
+    const [gender, setGender] = useState();
     const [whatsapp, setWhatsapp] = useState();
     const history = useHistory();
 
@@ -30,15 +31,32 @@ export default function Termin() {
     }, []);
 
     const onChangeDate = (event) => {
-        setDate(event.target.value);
+        var date = formatDate(event.target.value);
+        setDate(date);
     };
+
+    const formatDate = (date) => {
+        let splitString = date.split("-");
+        let newString = "";
+        for (let i = splitString.length - 1; i >= 0; i--) {
+            if (i > 0) {
+                newString += `${splitString[i]}.`;
+            } else {
+                newString += splitString[i];
+            }
+        }
+        return newString;
+    };
+
     const onChangeTime = (event) => {
         setTime(event.target.value);
     };
+    const onChangeGender = (event) => {
+        setGender(event.target.value);
+    };
 
     const onClick = () => {
-        const url = `https://wa.me/${whatsapp}?text=Hallo%20Hisham!%20Hast%20du%20am%20${date}%20um%20${time}%20Uhr%20Zeit?
-`;
+        const url = `https://wa.me/${whatsapp}?text=Hallo%20Hisham!%20Hast%20du%20am%20${date}%20um%20${time}%20Uhr%20Zeit%20für%20einen%20${gender}%20Haarschnitt?`;
         setLink(url);
     };
 
@@ -75,6 +93,29 @@ export default function Termin() {
                     <h3>Wähle ein Datum für deine Terminanfrage!</h3>
                     <input onChange={onChangeDate} type="date" />
                     <input onChange={onChangeTime} type="time" />
+                    <div className="gender-selector">
+                        <h2>Geschlecht:</h2>
+                        <div className="radio-button">
+                            <input
+                                id="maennlich"
+                                value="Herren"
+                                onChange={onChangeGender}
+                                type="radio"
+                                name="gender"
+                            />
+                            <label htmlFor="maennlich">Männlich</label>
+                        </div>
+                        <div className="radio-button">
+                            <input
+                                id="weiblich"
+                                value="Damen"
+                                onChange={onChangeGender}
+                                type="radio"
+                                name="gender"
+                            />
+                            <label htmlFor="weiblich">Weiblich</label>
+                        </div>
+                    </div>
                     {date != undefined && time != undefined ? (
                         <a href={link} onClick={onClick}>
                             <button>

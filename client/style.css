@@ -369,6 +369,33 @@ nav button:hover {
     margin: 5px;
     cursor: text;
 }
+
+.gender-selector {
+    width: 300px;
+    margin-bottom: 20px;
+}
+
+.gender-selector h2 {
+    margin: 10px 10px 10px 0px;
+    font-size: 20px;
+    color: #2c3639;
+}
+.radio-button {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.radio-button label {
+    margin-left: 10px;
+    color: #2c3639;
+}
+
+.gender-selector input {
+    height: 20px;
+    width: 20px;
+}
+
 .termin-tool button {
     width: 300px;
     height: 50px;
@@ -577,7 +604,14 @@ nav button:hover {
         align-items: center;
         justify-content: center;
         flex-direction: column;
-        margin-top: 170px;
+        margin-top: 150px;
+    }
+
+    .termin-text h1 {
+        font-size: 40px;
+        font-family: "Oswald", sans-serif;
+        line-height: 45px;
+        margin: 10px 0px 10px 0px;
     }
 
     .termin-tool {
@@ -591,6 +625,10 @@ nav button:hover {
         border-left: none;
         margin-top: 30px;
         padding-top: 30px;
+    }
+
+    .termin-tool button {
+        margin-bottom: 78px;
     }
 
     .about-page2 h1 {
